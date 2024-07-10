@@ -1,0 +1,16 @@
+{
+    "name": "InGame.Data",
+    "rootNamespace": "",
+    "references": [
+        "GUID:cc883c6ca56c12d44b45845e094e7ca3"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

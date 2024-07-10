@@ -1,0 +1,18 @@
+{
+    "name": "InGmae.Pressentation",
+    "rootNamespace": "",
+    "references": [
+        "GUID:f759c4035d476b643ada650320af2864",
+        "GUID:cc883c6ca56c12d44b45845e094e7ca3",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
