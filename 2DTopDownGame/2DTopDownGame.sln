@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{7179D61B-EC82-D075-25F1-BED015152056}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InGame.Application.Installer", "InGame.Application.Installer.csproj", "{27FDBE02-7ABC-4C8B-9389-55352721327F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InGmae.Pressentation", "InGmae.Pressentation.csproj", "{A3F3FBC3-15D4-6464-EF1B-3DF63E3AFAB8}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,14 +13,6 @@ Global
 		{7179D61B-EC82-D075-25F1-BED015152056}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7179D61B-EC82-D075-25F1-BED015152056}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7179D61B-EC82-D075-25F1-BED015152056}.Release|Any CPU.Build.0 = Release|Any CPU
-		{27FDBE02-7ABC-4C8B-9389-55352721327F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{27FDBE02-7ABC-4C8B-9389-55352721327F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{27FDBE02-7ABC-4C8B-9389-55352721327F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{27FDBE02-7ABC-4C8B-9389-55352721327F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A3F3FBC3-15D4-6464-EF1B-3DF63E3AFAB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A3F3FBC3-15D4-6464-EF1B-3DF63E3AFAB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A3F3FBC3-15D4-6464-EF1B-3DF63E3AFAB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A3F3FBC3-15D4-6464-EF1B-3DF63E3AFAB8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

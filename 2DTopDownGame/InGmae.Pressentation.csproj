@@ -60,11 +60,13 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.36f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\InGame\Pressentation\View\CharacterView.cs" />
-    <Compile Include="Assets\Scripts\InGame\Pressentation\VContainer\ICharacterLifetimeScope.cs" />
+    <Compile Include="Assets\Scripts\2DTopDwonGame\InGame\Pressentation\Presenter\InGamePresenter.cs" />
+    <Compile Include="Assets\Scripts\2DTopDwonGame\InGame\Pressentation\VContainer\ICharacterLifetimeScope.cs" />
+    <Compile Include="Assets\Scripts\2DTopDwonGame\InGame\Pressentation\Presenter\PlayerPresenter.cs" />
+    <Compile Include="Assets\Scripts\2DTopDwonGame\InGame\Pressentation\View\CharacterView.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Scripts\InGame\Pressentation\InGmae.Pressentation.asmdef" />
+    <None Include="Assets\Scripts\2DTopDwonGame\InGame\Pressentation\InGmae.Pressentation.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -945,6 +947,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="InGame.Domain.csproj">
+      <Project>{DAF9A629-CB7A-2D3C-DD98-09B3F212577F}</Project>
+      <Name>InGame.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
