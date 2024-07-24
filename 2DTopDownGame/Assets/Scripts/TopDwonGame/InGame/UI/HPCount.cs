@@ -17,6 +17,7 @@ public class HPCount : MonoBehaviour
         HPGeneration();
     }
 
+    // HPアイコンを生成するメソッド
     void HPGeneration()
     {
         maxHP = hpData.HP;
@@ -32,10 +33,12 @@ public class HPCount : MonoBehaviour
         playerHP.OnHPChanged += UpdateHP; // HPが変わったときに呼ばれるイベント
     }
 
+    // HPが変わったときに呼ばれるメソッド
     void UpdateHP(int currentHP)
     {
         for (int i = 0; i < maxHP; i++)
         {
+            // 現在のHPに応じてアイコンの表示/非表示を切り替える
             hpImages[i].gameObject.SetActive(i < currentHP);
         }
     }

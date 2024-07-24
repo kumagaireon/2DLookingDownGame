@@ -1,24 +1,38 @@
 using UnityEngine;
-
-public abstract class CharacterAttack : MonoBehaviour
+namespace Common.Data.Character
 {
-    public int damage { get; set; }
-    protected GameObject currentObject;
-
-    public virtual void Attack()
+    /// <summary>
+    /// キャラクターの攻撃を管理する抽象クラス
+    /// </summary>
+    public abstract class CharacterAttack : MonoBehaviour
     {
-        if (IsAttack())
+        public int damage { get; set; }
+        protected GameObject currentObject;
+
+        // 攻撃メソッド。攻撃可能な場合にターゲットのHPを減少させる
+        public virtual void Attack()
         {
-            CharacterHp hp = currentObject.GetComponent<CharacterHp>();
-            hp.HP(damage, currentObject);
-            currentObject = null;
+            if (IsAttack()) // 攻撃可能かどうかをチェック
+            {
+                // ターゲットのCharacterHpコンポーネントを取得
+                CharacterHp hp = currentObject.GetComponent<CharacterHp>();
+
+                // ターゲットのHPを減少させる
+                hp.HP(damage, currentObject);
+
+                // 攻撃後にターゲットをクリア
+                currentObject = null;
+            }
         }
-    }
 
-    protected abstract bool IsAttack();
+        // 攻撃可能かどうかを判定する抽象メソッド
+        protected abstract bool IsAttack();
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        currentObject = collision.gameObject;
+        // トリガーに入ったときに呼び出されるメソッド
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            // トリガーに入ったオブジェクトを現在のターゲットとして設定
+            currentObject = collision.gameObject;
+        }
     }
 }

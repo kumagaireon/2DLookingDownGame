@@ -34,18 +34,23 @@ namespace InGame.Enemy
         {
             while (!stopSpawning)
             {
+                // 指定された間隔で待機
                 await UniTask.Delay((int)(spawnInterval * 1000));
 
+                // 生成ポイントが設定されていない場合、生成ルーチンを停止
                 if (generationPoints.Count == 0)
                 {
                     stopSpawning = true;
                     break;
                 }
 
+                // 生成された敵の数が最大生成数未満の場合、新しい敵を生成
                 if (spawnedEnemies.Count < maxEnemies)
                 {
                     SpawnEnemy();
                 }
+
+                // すべての敵が非アクティブかどうかをチェック
                 CheckAllEnemiesInactive();
             }
         }
@@ -68,6 +73,7 @@ namespace InGame.Enemy
         private void CheckAllEnemiesInactive()
         {
             bool allInactive = true;
+            // 生成された敵のリストを逆順にループ
             for (int i = spawnedEnemies.Count - 1; i >= 0; i--)
             {
                 if (spawnedEnemies[i] == null)
@@ -77,10 +83,12 @@ namespace InGame.Enemy
                 }
                 else if (spawnedEnemies[i].activeSelf)
                 {
+                    // アクティブな敵が存在する場合、フラグをfalseに設定
                     allInactive = false;
                 }
             }
 
+            // すべての敵が非アクティブであれば、シーンコントローラーのResultメソッドを呼び出す
             if (allInactive)
             {
                 FindObjectOfType<SceneController>().Result();

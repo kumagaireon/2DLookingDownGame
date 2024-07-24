@@ -1,24 +1,34 @@
 using Common;
 using UnityEngine;
-
-public class CharacterBase : MonoBehaviour
+namespace Common.Data.Character
 {
-    [SerializeField] CharacterData data;
-    [SerializeField] CharacterMove move;
-    [SerializeField] CharacterAttack attack;
-    [SerializeField] CharacterHp hp;
-    [SerializeField] CharacterDead dead;
-    [SerializeField] SoundController soundController;
-    private void Awake()
+    /// <summary>
+    /// キャラクターの基本的な設定と動作を管理するクラス
+    /// </summary>
+    public class CharacterBase : MonoBehaviour
     {
-        move.MoveSpeed = data.MoveSpeed;
-        attack.damage = data.Damage;
-        hp.maxHP = data.HP;
-        hp.characterDead = dead;
-        dead.SoundController = soundController;
-    }
-    private void FixedUpdate()
-    {
-        move.Move();
+        [SerializeField] CharacterData data; // キャラクターのデータ
+        [SerializeField] CharacterMove move; // キャラクターの移動を管理するコンポーネント
+        [SerializeField] CharacterAttack attack; // キャラクターの攻撃を管理するコンポーネント
+        [SerializeField] CharacterHp hp; // キャラクターのHPを管理するコンポーネント
+        [SerializeField] CharacterDead dead; // キャラクターの死亡処理を管理するコンポーネント
+        [SerializeField] SoundController soundController; // サウンドコントローラー
+
+        // オブジェクトが有効になったときに呼び出される
+        private void Awake()
+        {
+            // キャラクターの各コンポーネントにデータを設定
+            move.MoveSpeed = data.MoveSpeed; // 移動速度を設定
+            attack.damage = data.Damage; // 攻撃のダメージを設定
+            hp.maxHP = data.HP; // 最大HPを設定
+            hp.characterDead = dead; // 死亡処理を設定
+            dead.SoundController = soundController; // サウンドコントローラーを設定
+        }
+
+        // 固定更新メソッド。物理演算の更新タイミングで呼び出される
+        private void FixedUpdate()
+        {
+            move.Move(); // キャラクターを移動
+        }
     }
 }
