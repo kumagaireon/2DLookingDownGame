@@ -1,16 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-namespace Common.Data
-{
-    public class CharacterDead : MonoBehaviour
-    {
-        [SerializeField] SoundController SoundController;
 
-        public void Dead()
-        {
-            SoundController.Death();
-            gameObject.SetActive(false);
-        }
+public abstract class CharacterDead : MonoBehaviour
+{
+    public SoundController SoundController { get; set; }
+    public void Dead(GameObject target)
+    {
+        SoundController.Death();
+        target.gameObject.SetActive(false);
     }
 }

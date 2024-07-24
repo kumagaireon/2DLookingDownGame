@@ -1,37 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 namespace InGame.Enemy
 {
-    public class EnemyMove : MonoBehaviour
+    public class EnemyMove : CharacterMove
     {
-        [SerializeField] private Transform player; // プレイヤーのTransform
-        [SerializeField] CharacterData character;
-        private float moveSpeed; // 移動速度
-
-        private void Start()
+        [SerializeField] CharacterBase player;
+        public override void Move()
         {
-            player = GameObject.FindWithTag("Player").transform;
-            moveSpeed = character.MoveSpeed * 0.5f;
-        }
-        void Update()
-        {
-            MoveTowardsPlayerObject();
+            UpdateDirection();
+            base.Move();
         }
 
-        private void MoveTowardsPlayerObject()
+        void UpdateDirection()
         {
             // プレイヤーの位置を取得
-            Vector3 playerPosition = player.position;
+            Vector2 playerPosition = player.transform.position;
 
             // 現在の位置を取得
-            Vector3 currentPosition = transform.position;
+            Vector2 currentPosition = transform.position;
 
             // プレイヤーの方向を計算
-            Vector3 direction = (playerPosition - currentPosition).normalized;
+            direction = (playerPosition - currentPosition).normalized;
 
-            // プレイヤーの方向に移動
-            transform.position += direction * moveSpeed * Time.deltaTime;
         }
     }
 }

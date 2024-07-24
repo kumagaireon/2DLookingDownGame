@@ -11,12 +11,11 @@ GameObject:
   - component: {fileID: 2736185156457936811}
   - component: {fileID: 4029471134026349224}
   - component: {fileID: 6539652839989843200}
-  - component: {fileID: 7641813880444902191}
   - component: {fileID: 2421506282537859588}
   - component: {fileID: 7524480989017018116}
   - component: {fileID: 9051794637800423310}
   m_Layer: 0
-  m_Name: EnemyCharacter
+  m_Name: OldEnemyCharacter
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50,7 +49,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16f2d4d5d0f9e034dbabfb21036bbdcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   character: {fileID: 11400000, guid: ea072a105ee8e9047933cbf171c690e4, type: 2}
 --- !u!114 &6539652839989843200
 MonoBehaviour:
@@ -65,20 +63,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRange: 0.5
+  retreatDistance: 1
   character: {fileID: 11400000, guid: ea072a105ee8e9047933cbf171c690e4, type: 2}
---- !u!114 &7641813880444902191
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 793711441078620914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18570245f74de554ba2bf79c59147023, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SoundController: {fileID: 5176412569384181738, guid: da11599d59327594d8f090c82c248aa9, type: 3}
 --- !u!114 &2421506282537859588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,9 +78,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 11400000, guid: ea072a105ee8e9047933cbf171c690e4, type: 2}
+  Type: 1
+  CharacterDead: {fileID: 0}
   currentHP: 0
   maxHP: 0
-  Type: 1
 --- !u!50 &7524480989017018116
 Rigidbody2D:
   serializedVersion: 4

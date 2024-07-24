@@ -30,7 +30,8 @@ namespace TopDownGame.Common.Application
         static readonly string path
             = System.IO.Path.Combine(UnityEngine.Application.streamingAssetsPath,
                 "character_data.bin");
-     *//*   public override void OnInspectorGUI()
+     */
+    /*   public override void OnInspectorGUI()
         {
             base.OnInspectorGUI();
             if (GUILayout.Button("Gererate MasterData"))

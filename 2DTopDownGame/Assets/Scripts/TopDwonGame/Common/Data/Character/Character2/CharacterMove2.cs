@@ -1,11 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.Collections;
 using UnityEngine;
 
 namespace Common.Data
 {
-    public class CharacteMove : MonoBehaviour
+    public class CharacterMove2 : MonoBehaviour
     {
         //“®‚«
 
@@ -13,7 +10,7 @@ namespace Common.Data
         float MoveSpeed;
         private void Start()
         {
-            MoveSpeed = character.MoveSpeed * 1.5f;
+            MoveSpeed = character.playerMoveSpeed;
         }
 
         private void Update()

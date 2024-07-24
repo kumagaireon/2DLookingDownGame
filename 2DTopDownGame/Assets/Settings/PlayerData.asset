@@ -10,9 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 351e809a5669f6943a41d075228bdeae, type: 3}
-  m_Name: DataList
+  m_Name: PlayerData
   m_EditorClassIdentifier: 
-  PlayerHP: 3
-  EnemyHP: 1
-  MoveSpeed: 3
+  HP: 3
+  MoveSpeed: 5
   Damage: 1
+  PlayerHP: 0
+  EnemyHP: 0
+  playerMoveSpeed: 0
+  EnemyMoveSpeed: 0

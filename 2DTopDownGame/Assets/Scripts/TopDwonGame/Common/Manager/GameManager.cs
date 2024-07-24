@@ -13,7 +13,6 @@ public class GameManager : SingletonMonoBehehaviour<GameManager>
     public States state = States.Title;
     private void Update()
     {
-        //SetCursorLock();
         PlayType();
         GameQuit();
     }
@@ -22,19 +21,22 @@ public class GameManager : SingletonMonoBehehaviour<GameManager>
         switch (state)
         {
             case States.Title:
+                MouseCursorOn();
                 break;
             case States.InGame:
                 break;
             case States.Result:
-                if (Input.GetMouseButtonDown(1))
-                {
-                    Cursor.lockState = CursorLockMode.None;
-                    Cursor.visible = true;
-                }
+                MouseCursorOn();
                 break;
         }
     }
 
+
+    private void MouseCursorOn()
+    {
+        Cursor.visible = true; // カーソルを表示
+        Cursor.lockState = CursorLockMode.None;
+    }
     /// <summary>
     /// ゲーム終了処理
     /// </summary>

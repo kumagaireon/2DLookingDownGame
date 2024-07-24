@@ -1,18 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ENemyHP : MonoBehaviour
+namespace InGame.Enemy
 {
-    // Start is called before the first frame update
-    void Start()
+    public class EnemyHp : CharacterHp
     {
-        
-    }
+        public override void HP(int damage, GameObject target)
+        {
+            base.HP(damage, target); // 親クラスのHPメソッドを呼び出す
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+            if (currentHP <= 0)
+            {
+                TimeAndKill.IncrementEnemyKill();
+            }
+        }
     }
 }

@@ -41,7 +41,8 @@ public class SceneController : MonoBehaviour
 
     private void DisplayResults()
     {
-        resultText.text = $"クリア時間: {TimeAndKill.GameTimer:F2} \n倒した数: {TimeAndKill.EnemyKill}";
+        resultText.text = $"クリア時間: {TimeAndKill.GameTimer:F2} \n" +
+            $"倒した数: {TimeAndKill.EnemyKill}";
         Debug.Log(resultText.text);
     }
 }

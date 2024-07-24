@@ -9,17 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f799a67d7cea09b49982fc69e646a9f5, type: 3}
-  m_Name: CharacterDataList
+  m_Script: {fileID: 11500000, guid: 351e809a5669f6943a41d075228bdeae, type: 3}
+  m_Name: EnemyData
   m_EditorClassIdentifier: 
-  Enemies:
-  - _Name: "\u30D7\u30EC\u30A4\u30E4\u30FC"
-    _Type: 0
-    _HP: 3
-    _Damage: 1
-    _Walkspd: 4
-  - _Name: 
-    _Type: 1
-    _HP: 1
-    _Damage: 1
-    _Walkspd: 4
+  HP: 1
+  MoveSpeed: 3
+  Damage: 1
+  PlayerHP: 0
+  EnemyHP: 0
+  playerMoveSpeed: 0
+  EnemyMoveSpeed: 0
