@@ -1,4 +1,4 @@
-using TopDownGame.Common.Data;
+using TopDownGame.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,21 +7,21 @@ using UnityEngine;
 
 namespace TopDownGame.Common.Application
 {
-    [CreateAssetMenu(fileName = "character_master_data_table",
-            menuName = "TopDownGame/Master Data/Character Master Data")]
-    public class CharacterMasterDataTable : ScriptableObject
+/*    [CreateAssetMenu(fileName = "character_master_data_table",
+            menuName = "TopDownGame/Master Data/aaaaa Master Data")]*/
+    /*public class CharacterMasterDataTable : ScriptableObject
     {
         [Serializable]
-        public struct CharacterData
+        public struct aaaaa
         {
             public string Name;
             public CharacterType Type;
             public float MovementSpeed;
             public float JumpPower;
         }
-        [SerializeField] List<CharacterData> characters;
+        [SerializeField] List<aaaaa> characters;
 
-        public List<CharacterData> Characters => characters;
+        public List<aaaaa> Characters => characters;
     }
 
     [CustomEditor(typeof(CharacterMasterDataTable))]
@@ -30,7 +30,7 @@ namespace TopDownGame.Common.Application
         static readonly string path
             = System.IO.Path.Combine(UnityEngine.Application.streamingAssetsPath,
                 "character_data.bin");
-     /*   public override void OnInspectorGUI()
+     *//*   public override void OnInspectorGUI()
         {
             base.OnInspectorGUI();
             if (GUILayout.Button("Gererate MasterData"))
@@ -39,7 +39,7 @@ namespace TopDownGame.Common.Application
 
                 var characters = dataTable.Characters.Select(x =>
                 new CharacterDataEntity(Guid.NewGuid(),
-                x.Name, x.Type, x.MovementSpeed, x.JumpPower)).ToList();
+                x.Name, x.CharacterType, x.MovementSpeed, x.JumpPower)).ToList();
 
                 IDataStore<ICharacterDataEntity> dataStore
                     = new BinaryDataStore<ICharacterDataEntity>(path);
@@ -57,6 +57,6 @@ namespace TopDownGame.Common.Application
                 dataStore.Load();
                 dataStore.Entites.ForEach(Debug.Log);
             }
-        }*/
-    }
+        }*//*
+    }*/
 }

@@ -60,10 +60,28 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.36f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\TopDwonGame\Common\Data\Character\CharacterHp.cs" />
+    <Compile Include="Assets\Scripts\TopDwonGame\Common\Data\Character\CharacteMove.cs" />
     <Compile Include="Assets\MasterData\CharacterMasterDataTable.cs" />
-    <Compile Include="Assets\Scripts\TopDwonGame\Common\Data\DataEntity\IDataEntity.cs" />
+    <Compile Include="Assets\Scripts\TopDwonGame\Common\Data\Character\CharacterDead.cs" />
+    <Compile Include="Assets\Scripts\TopDwonGame\Common\Controller\SceneController.cs" />
+    <Compile Include="Assets\Scripts\TopDwonGame\InGame\PauseButton.cs" />
+    <Compile Include="Assets\Scripts\TopDwonGame\InGame\TimeAndKill.cs" />
+    <Compile Include="Assets\Scripts\TopDwonGame\Common\Controller\SoundController.cs" />
+    <Compile Include="Assets\Scripts\TopDwonGame\Common\Data\Character\CharacterView.cs" />
+    <Compile Include="Assets\Scripts\TopDwonGame\Common\Data\Character\CharacterData.cs" />
     <Compile Include="Assets\Scripts\TopDwonGame\Common\Application\MasterData\CharacterMasterDataTable.cs" />
-    <Compile Include="Assets\Scripts\TopDwonGame\Common\Data\DataEntity\CharacterDataEntity.cs" />
+    <Compile Include="Assets\Scripts\TopDwonGame\InGame\Enemy\EnemyAttack.cs" />
+    <Compile Include="Assets\Scripts\TopDwonGame\InGame\Enemy\ENemyHP.cs" />
+    <Compile Include="Assets\Scripts\TopDwonGame\InGame\Enemy\EnemyMove.cs" />
+    <Compile Include="Assets\Scripts\TopDwonGame\InGame\UI\HPCount.cs" />
+    <Compile Include="Assets\Scripts\TopDwonGame\Common\Data\Character\CharacterAttack.cs" />
+    <Compile Include="Assets\Scripts\TopDwonGame\Common\Manager\GameManager.cs" />
+    <Compile Include="Assets\Scripts\TopDwonGame\Common\Data\Character\CharacterBase.cs" />
+    <Compile Include="Assets\Scripts\TopDwonGame\Common\Map\MapGenerator.cs" />
+    <Compile Include="Assets\Scripts\TopDwonGame\Common\Manager\SingletonMonoBehehaviour.cs" />
+    <Compile Include="Assets\Scripts\TopDwonGame\Common\Manager\SoundManager.cs" />
+    <Compile Include="Assets\Scripts\TopDwonGame\InGame\Enemy\EnemyGeneration.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -945,12 +963,16 @@
       <HintPath>Library\ScriptAssemblies\Unity.2D.Aseprite.Common.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+    <Reference Include="VContainer">
+      <HintPath>Library\ScriptAssemblies\VContainer.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Config.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Config.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Editor">
@@ -1091,6 +1113,10 @@
     </Reference>
     <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VContainer.Editor">
+      <HintPath>Library\ScriptAssemblies\VContainer.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Timeline">
